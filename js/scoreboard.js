@@ -160,13 +160,11 @@ const Sauger = player["Sauger"]
 const SmallmouthBass = player["Smallmouth Bass"]
 const YellowPerch = player["Yellow Perch"]
 
+const table = document.getElementById("scoreboard")
 
-
-
-
-
-
-
-
-
-
+// add one line in the table for each object in the array YellowPerch
+YellowPerch.forEach((player) => {
+    const row = table.insertRow(0)
+    row.insertCell().innerHTML = player.PlayerName
+    row.insertCell().innerHTML = player.Poid
+});
