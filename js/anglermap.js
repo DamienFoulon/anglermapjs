@@ -50,11 +50,7 @@ const yellowPerchLayer = L.layerGroup()
 //Map Markers -------------------------------------------------------------------------------------
 let fishIcon = L.icon({
     iconUrl: '../img/marker.png',
-    iconSize: [38, 95],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76],
-    shadowSize: [68, 95],
-    shadowAnchor: [22, 94]
+    iconSize: [50, 50],
 });
 
 //Markers -----------------------------------------------------------------------------------------
@@ -321,17 +317,18 @@ document.addEventListener('click', function handleClick(e) {
             return;
     }
 });
-
-L.marker([51.5, -0.09]).addTo(map);
-
-
-let popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent(e.latlng.toString())
-        .openOn(map);
+let displayCoords = false
+function toggleCoord() {
+    displayCoords = !displayCoords;
 }
 
+var popup = L.popup();
+function onMapClick(e) {
+    if (displayCoords === true) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent(e.latlng.toString())
+            .openOn(map);
+    }
+}
 map.on('click', onMapClick);

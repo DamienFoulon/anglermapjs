@@ -212,7 +212,7 @@ img {
 
 .nav {
     position: fixed;
-    top: 0;
+    top: 15px;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -230,51 +230,78 @@ img {
 }
 
 .nav ul li {
-    margin-left: 5px;
+    margin-left: 15px;
+
 }
 
 .nav ul a {
-    font-size: 36px;
+    font-size: 25px;
+    color: #5AADBB;
+    text-transform: uppercase;
     background-color: white;
+    border-radius: 5px;
     padding: 5px;
     text-decoration: none;
-    color: black;
+
 
 }
 
-@media screen and (max-width: 1450px) {
-    nav ul {
-        flex-direction: column;
-        margin-left: 1rem;
-    }
+.fa-discord {
+    color: #5AADBB;
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 1em;
+    z-index: 999;
+}
 
-    .nav-icon {
-        margin-right: 0;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
+.Social p {
 
-    .nav-btn {
-        margin: 1rem 0 0 0;
-    }
+    color: white;
+    position: absolute;
+    right: 3em;
+    bottom: 7em;
+    padding: 0.5em;
+    border-radius: 10px;
+    z-index: 999;
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
 
-    .nav-btn-label {
-        display: none;
-    }
+}
 
-    .nav-pill.nav-btn {
-        padding-right: 0;
-    }
+.Social span {
+    color: #5AADBB;
+}
 
-    .nav-link {
-        display: none;
-    }
+.fa-plus {
+    color: #5AADBB;
+    position: absolute;
+    right: 8em;
+    bottom: 1em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 999;
+}
 
-    .container {
-        max-width: 155px;
-        min-width: 155px;
-    }
+.fa-steam-symbol {
+    color: #5AADBB;
+    position: absolute;
+    right: 5.25em;
+    bottom: 1em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 999;
+}
 
-    .nav-flex {
-        display: inline;
-    }
+.fa-plus:hover,
+.fa-discord:hover,
+.fa-steam-symbol:hover {
+    color: white;
+    background-color: #5AADBB;
 }
