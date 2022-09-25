@@ -160,11 +160,81 @@ const Sauger = player["Sauger"]
 const SmallmouthBass = player["Smallmouth Bass"]
 const YellowPerch = player["Yellow Perch"]
 
-const table = document.getElementById("scoreboard")
+const blueGillTable = document.getElementById("BlueGillTable")
+const CatfishTable = document.getElementById("CatfishTable")
+const GoldenTroutTable = document.getElementById("GoldenTroutTable")
+const KokaneeSalmonTable = document.getElementById("KokaneeSalmonTable")
+const LakeTroutTable = document.getElementById("LakeTroutTable")
+const LargemouthBassTable = document.getElementById("LargemouthBassTable")
+const PikeTable = document.getElementById("PikeTable")
+const RainbowTroutTable = document.getElementById("RainbowTroutTable")
+const SaugerTable = document.getElementById("SaugerTable")
+const SmallmouthBassTable = document.getElementById("SmallmouthBassTable")
+const YellowPerchTable = document.getElementById("YellowPerchTable")
 
-// add one line in the table for each object in the array YellowPerch
-YellowPerch.forEach((player) => {
-    const row = table.insertRow(0)
-    row.insertCell().innerHTML = player.PlayerName
-    row.insertCell().innerHTML = player.Poid
-});
+// add one line sorted by Poid in the table for each object in the array YellowPerch
+blueGill.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    blueGillTable.appendChild(tr)
+})
+
+Catfish.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    CatfishTable.appendChild(tr)
+})
+
+GoldenTrout.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    GoldenTroutTable.appendChild(tr)
+})
+
+KokaneeSalmon.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    KokaneeSalmonTable.appendChild(tr)
+})
+
+LakeTrout.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    LakeTroutTable.appendChild(tr)
+})
+
+LargemouthBass.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    LargemouthBassTable.appendChild(tr)
+})
+
+Pike.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    PikeTable.appendChild(tr)
+})
+
+RainbowTrout.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    RainbowTroutTable.appendChild(tr)
+})
+
+Sauger.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    SaugerTable.appendChild(tr)
+})
+
+SmallmouthBass.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    SmallmouthBassTable.appendChild(tr)
+})
+
+YellowPerch.sort((a, b) => b.Poid - a.Poid).forEach((player, index) => {
+    const tr = document.createElement("tr")
+    tr.innerHTML = `<td>${index + 1}</td><td>${player.PlayerName}</td><td>${player.Poid}</td>`
+    YellowPerchTable.appendChild(tr)
+})
