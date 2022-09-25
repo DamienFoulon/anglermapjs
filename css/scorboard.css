@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --primary-colour: #5aadbb;
+    --secondary-colour: #ffffff;
+    --primary-accent-colour: #3a3a3a;
+    font-size: 15px;
+}
+
+body {
+    font-size: 8px;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+
+}
+
+.nav ul li {
+    margin-left: 5px;
+}
+
+.nav ul a {
+    font-size: 36px;
+    background-color: white;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+
+}

@@ -3,62 +3,54 @@
 
 <head>
     <!-- HTML Meta Tags -->
-    <title>Vinter Map - Interactive Map for Longvinter</title>
+    <title>Anglermap - Interactive Map for Call of the Wild : The Angler</title>
     <meta name="description"
-        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+        content="View the Call of the Wild: The Angler map showing all fishing locations for your diamonds fish - find quests locations, collectibles locations, and more!">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://vintermap.co">
+    <meta property="og:url" content="https://www.anglermap.fr">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Vinter Map - Interactive Map for Longvinter">
+    <meta property="og:title" content="Anglermap - Interactive Map for Call of the Wild : The Angler">
     <meta property="og:description"
-        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
-    <meta property="og:image" content="http://vintermap.co/img/logo.png">
-    <meta property="og:image:secure_url" content="https://vintermap.co/img/logo.png">
+        content="View the Call of the Wild: The Angler map showing all fishing locations for your diamonds fish - find quests locations, collectibles locations, and more!">
+    <meta property="og:image" content="http://vintermap.co/img/logo512.png">
+    <meta property="og:image:secure_url" content="https://www.anglermap.fr/img/logo512.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="vintermap.co">
-    <meta property="twitter:url" content="https://vintermap.co">
+    <meta property="twitter:domain" content="anglermap.fr">
+    <meta property="twitter:url" content="https://www.anglermap.fr">
     <meta name="twitter:title" content="Vinter Map - Interactive Map for Longvinter">
     <meta name="twitter:description"
         content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
-    <meta name="twitter:image" content="https://vintermap.co/img/logo.png">
+    <meta name="twitter:image" content="Anglermap - Interactive Map for Call of the Wild : The Angler">
 
-    <meta name="theme-color" content="#63C7A2">
+    <meta name="theme-color" content="#3A3A3A">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/logo512.png">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/favicon">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#61a480">
-    <meta name="msapplication-TileColor" content="#61a480">
-    <meta name="theme-color" content="#61a480">
+    <meta name="msapplication-TileColor" content="#3A3A3A">
+    <meta name="theme-color" content="#3A3A3A">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/40f50f2ac6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d6a0937d00.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-    Global site tag (gtag.js) - Google Analytics
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KF0G4PC38"></script>
+    <!-- Google Analytic -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NMTTHDZW5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', 'G-2KF0G4PC38');
-    </script>
-
+        gtag('config', 'G-5NMTTHDZW5');
+      </script>
 </head>
 <body>
     <header>
@@ -72,8 +64,8 @@
                     <li><button class="nav-pill nav-btn fish" id="catfish"><span class="nav-btn-label"  id="catfish" >catfish<i class="fa-solid fa-chevron-right"  id="catfish"></i></span></button></li>
                     <li><button class="nav-pill nav-btn fish" id="goldenTrout"><span class="nav-btn-label" id="goldenTrout">goldenTrout<i class="fa-solid fa-chevron-right" id="goldenTrout"></i></span></button></li>
                     <li><button class="nav-pill nav-btn fish" id="kokaneeSalmon"><span class="nav-btn-label" id="kokaneeSalmon" >kokaneeSalmon<i class="fa-solid fa-chevron-right" id="kokaneeSalmon"></i></span></button></li>
-                    <li><button class="nav-pill nav-btn fish" id="catfish"><span class="nav-btn-label"  id="catfish">lakeTrout<i class="fa-solid fa-chevron-right"  id="catfish"></i></span></button></li>
-                    <li><button class="nav-pill nav-btn fish" id="lakeTrout"><span class="nav-btn-label" id="lakeTrout">largemouthBass<i class="fa-solid fa-chevron-right" id="lakeTrout"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish" id="lakeTrout"><span class="nav-btn-label"  id="lakeTrout">lakeTrout<i class="fa-solid fa-chevron-right"  id="lakeTrout"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish" id="largemouthBass"><span class="nav-btn-label" id="largemouthBass">largemouthBass<i class="fa-solid fa-chevron-right" id="largemouthBass"></i></span></button></li>
                     <li><button class="nav-pill nav-btn fish" id="mountainWhitefish"><span class="nav-btn-label" id="mountainWhitefish">mountainWhitefish<i class="fa-solid fa-chevron-right" id="mountainWhitefish"></i></span></button></li>
                     <li><button class="nav-pill nav-btn fish" id="pike"><span class="nav-btn-label" id="pike">pike<i class="fa-solid fa-chevron-right" id="pike"></i></span></button></li>
                     <li><button class="nav-pill nav-btn fish" id="rainbowTrout"><span class="nav-btn-label" id="rainbowTrout">rainbowTrout<i class="fa-solid fa-chevron-right" id="rainbowTrout"></i></span></button></li>
@@ -100,6 +92,5 @@
         </div>
     </main>
     <script src="js/vinter-map.js"></script>
-    <script src="js/vinter-sidebar.js"></script>
 </body>
 </html>

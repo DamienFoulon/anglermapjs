@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HTML Meta Tags -->
+    <title>Vinter Map - Interactive Map for Longvinter</title>
+    <meta name="description"
+        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://vintermap.co">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vinter Map - Interactive Map for Longvinter">
+    <meta property="og:description"
+        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+    <meta property="og:image" content="http://vintermap.co/img/logo.png">
+    <meta property="og:image:secure_url" content="https://vintermap.co/img/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="vintermap.co">
+    <meta property="twitter:url" content="https://vintermap.co">
+    <meta name="twitter:title" content="Vinter Map - Interactive Map for Longvinter">
+    <meta name="twitter:description"
+        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+    <meta name="twitter:image" content="https://vintermap.co/img/logo.png">
+
+    <meta name="theme-color" content="#63C7A2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#61a480">
+    <meta name="msapplication-TileColor" content="#61a480">
+    <meta name="theme-color" content="#61a480">
+    <link rel="stylesheet" href="css/scorboard.css">
+    <script src="https://kit.fontawesome.com/40f50f2ac6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KF0G4PC38"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2KF0G4PC38');
+    </script>
+
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scoreboard.html">Scoreboard</a></li>
+            </ul>
+        </div> 
+        <div className="scorearray">
+            <h1>Blue Gill</h1>
+            <tbody id="datas">
+
+            </tbody>
+            <span id="test"></span>
+        </div>
+        <!-- <div className="scorearray">
+            <h1>Catfish</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {Catfish.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Golden Trout</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {GoldenTrout.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Kokanee Salmon</h1>
+
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {KokaneeSalmon.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Lake Trout</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {LakeTrout.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Large Mouth Bass</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {LargemouthBass.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Pike</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {Pike.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>RainbowTrout</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {RainbowTrout.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Sauger</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {Sauger.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Small mouth Bass</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {SmallmouthBass.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div>
+        <div className="scorearray">
+            <h1>Yellow Perch</h1>
+            <table class="tftable">
+                <tr><th>PLayer Name</th><th>Weight</th></tr>
+                {YellowPerch.map((index) => <tr><td>{index.PlayerName}</td><td>{index.Poid}</td></tr>)}
+            </table>
+        </div> -->
+    </div>   
+    </main>
+    <script src="js/scoreboard.js"></script>
+</body>
+</html>
