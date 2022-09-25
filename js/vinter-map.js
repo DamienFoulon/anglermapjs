@@ -126,8 +126,8 @@ let markersList = {
     ],
     "Lake Trout": [
         {
-            "lat": 42.747012,
-            "lng": -139.306641,
+            "lat": -93.5,
+            "lng": 104,
             "popup": "Lake Trout",
             "isDiamond": true,
             "layer": lakeTroutLayer
@@ -324,14 +324,14 @@ document.addEventListener('click', function handleClick(e) {
 
 L.marker([51.5, -0.09]).addTo(map);
 
-// Click Map for Coordinates.
-// let popup = L.popup();
 
-// function onMapClick(e) {
-//     popup
-//         .setLatLng(e.latlng)
-//         .setContent(e.latlng.toString())
-//         .openOn(map);
-// }
+let popup = L.popup();
 
-// map.on('click', onMapClick);
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent(e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
