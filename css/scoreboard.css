@@ -11,18 +11,8 @@ body {
     font-size: 8px;
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-
-    /*
-      Introduced in IE 10.
-      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
-    -ms-user-select: none;
-    user-select: none;
+    color: #3A3A3A;
 }
-
 
 .nav {
     position: fixed;
@@ -80,7 +70,8 @@ body {
 }
 
 .tftable tr {
-    background-color: #2f2f2f;
+    color: #171515;
+    background-color: #e0e0e0;
 }
 
 .tftable td {
@@ -93,6 +84,7 @@ body {
 
 .tftable tr:hover {
     background-color: #171515;
+    color: #f2f2f2;
 }
 
 .scorearray {
@@ -108,7 +100,7 @@ body {
     font-size: 20px;
     margin: 0;
     text-transform: uppercase;
-    background-color: white;
+    background-color: #e0e0e0;
 }
 
 .titlescore {
@@ -121,11 +113,11 @@ body {
     flex-wrap: wrap;
     top: 20%;
     font-size: 18px;
-    background-color: #5AADBB;
+    background-color: #3a3a3a;
 }
 
 .scoreboard {
-    background-color: #5AADBB;
+    background-color: #3a3a3a;
     height: 100vh;
 }
 
@@ -149,10 +141,11 @@ body {
     top: 13%;
     text-align: center;
     font-size: 20px;
+    color: #e0e0e0;
 }
 
 .tipsscore span {
-    color: #ffffff;
+    color: #5aadbb;
 }
 
 .tipsscore p {

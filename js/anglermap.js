@@ -1,6 +1,6 @@
 //Map Generation ------------------------------------------------------------------------------------
 let mapMinZoom = 1;
-let mapMaxZoom = 5;
+let mapMaxZoom = 4;
 
 let southWest = L.latLng(-300, -100),
     northEast = L.latLng(50, 300),
@@ -250,14 +250,16 @@ let markersList = {
     ]
 }
 
-const displayLayer = (fish) => {
+const displayLayer = (fish, button) => {
     switch (map.hasLayer(fish)) {
         case true:
             map.removeLayer(fish)
+            button.classList.remove('selected')
             console.log('removed')
             break;
         case false:
             map.addLayer(fish)
+            button.classList.remove('selected')
             console.log("Layer added")
             break;
     }
