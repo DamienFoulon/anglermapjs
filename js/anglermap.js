@@ -73,13 +73,13 @@ let markersList = {
         // }
     ],
     "Catfish": [
-        // {
-        //     "lat": 40.123456,
-        //     "lng": -90.123456,
-        //     "popup": "Catfish",
-        //     "isDiamond": false,
-        //     "layer": catfishLayer
-        // },
+        {
+            "lat": -40.6875,
+            "lng": 119.5625,
+            "popup": "Catfish",
+            "isDiamond": true,
+            "layer": catfishLayer
+        },
         // {
         //     "lat": 25.123456,
         //     "lng": 78.123456,
@@ -122,19 +122,19 @@ let markersList = {
     ],
     "Lake Trout": [
         {
-            "lat": -93.5,
-            "lng": 104,
+            "lat": -40.75,
+            "lng": 21.75,
             "popup": "Lake Trout",
             "isDiamond": true,
             "layer": lakeTroutLayer
         },
-        // {
-        //     "lat": 74.56249,
-        //     "lng": 84.26586,
-        //     "popup": "Lake Trout",
-        //     "isDiamond": false,
-        //     "layer": lakeTroutLayer
-        // }
+        {
+            "lat": -95.9375,
+            "lng": 33.875,
+            "popup": "Lake Trout",
+            "isDiamond": true,
+            "layer": lakeTroutLayer
+        }
     ],
     "Largemouth Bass": [
         // {
@@ -193,19 +193,19 @@ let markersList = {
     ],
     "Rainbow Trout": [
         {
-            'lat': -67.169955,
-            'lng': -62.908203,
+            'lat': -74.5625,
+            'lng': 119.75,
             'popup': 'Rainbow Trout',
             'isDiamond': true,
             'layer': rainbowTroutLayer
         },
-        // {
-        //     'lat': 53.123456,
-        //     'lng': -90.123456,
-        //     'popup': 'Rainbow Trout',
-        //     'isDiamond': false,
-        //     'layer': rainbowTroutLayer
-        // }
+        {
+            'lat': -195.25,
+            'lng': 83.8125,
+            'popup': 'Rainbow Trout',
+            'isDiamond': true,
+            'layer': rainbowTroutLayer
+        }
     ],
     "Sauger": [
         // {
@@ -266,8 +266,6 @@ const displayLayer = (fish, button) => {
 for (let fish in markersList) {
     for (let marker of markersList[fish]) {
         if (marker.isDiamond) {
-            L.marker([marker.lat, marker.lng], { icon: fishIcon }).bindPopup(marker.popup + '💎').addTo(marker.layer)
-        } else {
             L.marker([marker.lat, marker.lng], { icon: fishIcon }).bindPopup(marker.popup).addTo(marker.layer)
         }
     }
