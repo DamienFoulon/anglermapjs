@@ -254,12 +254,10 @@ const displayLayer = (fish, button) => {
     switch (map.hasLayer(fish)) {
         case true:
             map.removeLayer(fish)
-            button.classList.remove('selected')
             console.log('removed')
             break;
         case false:
             map.addLayer(fish)
-            button.classList.remove('selected')
             console.log("Layer added")
             break;
     }
@@ -319,6 +317,15 @@ document.addEventListener('click', function handleClick(e) {
             return;
     }
 });
+
+// add selected class when a button is clicked
+const buttons = document.querySelectorAll('button')
+buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        button.classList.toggle('selected')
+    })
+})
+
 let displayCoords = false
 function toggleCoord() {
     displayCoords = !displayCoords;

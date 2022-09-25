@@ -66,7 +66,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15%;
+    width: 250px;
 }
 
 .nav-flex i {
@@ -96,8 +96,14 @@ nav ul {
 }
 
 .nav-btn {
-    cursor: pointer;
-    width: 209px;
+    width: 161px;
+    background-color: #5AADBB;
+}
+
+.selected {
+    color: #5AADBB;
+    background-color: #4C4C4C !important;
+    width: 185px !important;
 }
 
 .nav-btn:active {
