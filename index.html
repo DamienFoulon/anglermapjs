@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- HTML Meta Tags -->
+    <title>Vinter Map - Interactive Map for Longvinter</title>
+    <meta name="description"
+        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://vintermap.co">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vinter Map - Interactive Map for Longvinter">
+    <meta property="og:description"
+        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+    <meta property="og:image" content="http://vintermap.co/img/logo.png">
+    <meta property="og:image:secure_url" content="https://vintermap.co/img/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="vintermap.co">
+    <meta property="twitter:url" content="https://vintermap.co">
+    <meta name="twitter:title" content="Vinter Map - Interactive Map for Longvinter">
+    <meta name="twitter:description"
+        content="View the Longvinter island map showing all the farmable item locations for your compendium - find fishing spots, feather drops, flowers, shops and more!">
+    <meta name="twitter:image" content="https://vintermap.co/img/logo.png">
+
+    <meta name="theme-color" content="#63C7A2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#61a480">
+    <meta name="msapplication-TileColor" content="#61a480">
+    <meta name="theme-color" content="#61a480">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/40f50f2ac6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KF0G4PC38"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2KF0G4PC38');
+    </script>
+
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div id="map"></div>
+        <div class="container">
+            <nav class="nav-flex">
+                <ul>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">blueGill<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">catfish<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">goldenTrout<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">kokaneeSalmon<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">lakeTrout<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">largemouthBass<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">mountainWhitefish<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">pike<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">rainbowTrout<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">sauger<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">smallmouthBass<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                    <li><button class="nav-pill nav-btn fish"><span class="nav-btn-label">yellowPerch<i class="fa-solid fa-chevron-right"></i></span></button></li>
+                
+                </ul>
+                <!-- <ul>
+                    <li class="nav-link"><a href="https://twitter.com/wosps" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="nav-link"><a href="https://discord.gg/longvinter" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+                    <li class="nav-link"><a href="https://store.steampowered.com/app/1635450/Longvinter/" target="_blank"><i class="fa-brands fa-steam-symbol"></i></a></li>
+                </ul> -->
+            </nav>
+            <div class='allTips'>
+                <div class="Tips">
+                    <h1>Tips for the map </h1>
+                    <p>1. Press the pointer to get information on the style of fishing and the bait used.</p>
+                    <p>2. Contact us on discord to add new pointers for diamond fishing.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="js/vinter-map.js"></script>
+    <script src="js/vinter-sidebar.js"></script>
+</body>
+</html>

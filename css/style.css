@@ -1,0 +1,249 @@
+/* =================
+Variables & Misc
+====================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --primary-colour: #5aadbb;
+    --secondary-colour: #ffffff;
+    --primary-accent-colour: #3a3a3a;
+    font-size: 15px;
+}
+
+body {
+    font-size: 8px;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#map {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-color: var(--primary-accent-colour);
+    z-index: 0;
+    width: 100%;
+}
+
+/* =================
+Typography
+====================*/
+
+h1 {
+    margin: -1;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================
+Layout
+====================*/
+
+nav {
+    width: 100%;
+}
+
+header {
+    background-color: transparent;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+}
+
+.nav-flex {
+    display: flex;
+    width: 15%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-flex i {
+    margin-left: 15px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+}
+
+.nav-pill {
+    font-weight: 800;
+    font-size: .85rem;
+    text-transform: uppercase;
+    border: 0;
+    height: 3rem;
+    background-color: var(--primary-colour);
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    line-height: 3rem;
+}
+
+.nav-btn {
+    cursor: pointer;
+    width: 209px;
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn.active {
+    background-color: var(--primary-accent-colour);
+}
+
+.nav-link {
+    font-weight: 800;
+    font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-left: 1.5rem;
+}
+
+.nav-link a {
+    padding: .5rem 1rem;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #40378F;
+    border-radius: 10px;
+}
+
+.nav-logo {
+    padding: 0 2em;
+    background-color: var(--primary-accent-colour);
+    cursor: default;
+}
+
+.nav-logo-text {
+    margin-left: .5rem;
+    display: inline-block;
+    line-height: 1rem;
+    text-align: left;
+    vertical-align: middle;
+    ;
+}
+
+img {
+    height: 60%;
+    width: auto;
+    display: inline;
+    vertical-align: middle;
+}
+
+.nav-icon {
+    display: inline-block;
+    width: 3.2rem;
+    height: 100%;
+    margin: -2px 1rem 0 -2px;
+
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #2B2D66;
+}
+
+.nav-icon.active {
+    background-color: var(--primary-accent-colour);
+}
+
+.Tips {
+    position: absolute;
+    z-index: 99999999999999999;
+    width: 210px;
+    height: auto;
+    top: 39px;
+    background-color: #5AADBB;
+    border-radius: 3px;
+}
+
+.allTips {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    height: auto;
+    top: 250px;
+    right: 40px;
+    justify-content: end;
+}
+
+.Tips h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Tips p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.Tips p:last-child {
+    margin: 15px;
+}
+
+@media screen and (max-width: 1450px) {
+    nav ul {
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+
+    .nav-icon {
+        margin-right: 0;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .nav-btn {
+        margin: 1rem 0 0 0;
+    }
+
+    .nav-btn-label {
+        display: none;
+    }
+
+    .nav-pill.nav-btn {
+        padding-right: 0;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .container {
+        max-width: 155px;
+        min-width: 155px;
+    }
+
+    .nav-flex {
+        display: inline;
+    }
+}
