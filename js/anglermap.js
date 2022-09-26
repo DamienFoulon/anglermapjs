@@ -80,13 +80,13 @@ let markersList = {
             "isDiamond": true,
             "layer": catfishLayer
         },
-        // {
-        //     "lat": 25.123456,
-        //     "lng": 78.123456,
-        //     "popup": "Catfish",
-        //     "isDiamond": false,
-        //     "layer": catfishLayer
-        // }
+        {
+            "lat": -147.125,
+            "lng": 218.375,
+            "popup": "Catfish <br> Baitcasting / Frog ",
+            "isDiamond": true,
+            "layer": catfishLayer
+        }
     ],
     "Golden Trout": [
         // {
@@ -134,16 +134,23 @@ let markersList = {
             "popup": "Lake Trout",
             "isDiamond": true,
             "layer": lakeTroutLayer
+        },
+        {
+            "lat": -189.375,
+            "lng": 60.875,
+            "popup": "Lake Trout <br> baitcasting / Swimbait",
+            "isDiamond": true,
+            "layer": lakeTroutLayer
         }
     ],
     "Largemouth Bass": [
-        // {
-        //     "lat": 24.89654,
-        //     "lng": 74.89654,
-        //     "popup": "Largemouth Bass",
-        //     "isDiamond": false,
-        //     "layer": largemouthBassLayer
-        // },
+        {
+            "lat": -168.3125,
+            "lng": 221.875,
+            "popup": "Largemouth Bass <br> Float fishing- minnow",
+            "isDiamond": true,
+            "layer": largemouthBassLayer
+        },
         // {
         //     "lat": 45.89654,
         //     "lng": 12.89654,
@@ -169,20 +176,13 @@ let markersList = {
         // }
     ],
     "Pike": [
-        // {
-        //     "lat": 30,
-        //     "lng": 55,
-        //     "popup": "Pike",
-        //     "isDiamond": false,
-        //     "layer": pikeLayer
-        // },
-        // {
-        //     "lat": 35,
-        //     "lng": 60,
-        //     "popup": "Pike",
-        //     "isDiamond": false,
-        //     "layer": pikeLayer
-        // },
+        {
+            "lat": -96.25,
+            "lng": 87.5,
+            "popup": "Pike",
+            "isDiamond": true,
+            "layer": pikeLayer
+        },
         // {
         //     "lat": 25,
         //     "lng": 50,
@@ -208,13 +208,13 @@ let markersList = {
         }
     ],
     "Sauger": [
-        // {
-        //     'lat': 42.417954,
-        //     'lng': -71.123456,
-        //     'popup': 'Sauger',
-        //     'isDiamond': false,
-        //     'layer': saugerLayer
-        // },
+        {
+            'lat': -167,
+            'lng': 217.875,
+            'popup': 'Sauger <br> Float fishing- minnow',
+            'isDiamond': true,
+            'layer': saugerLayer
+        },
         // {
         //     'lat': -14.256845,
         //     'lng': 25.123456,
