@@ -12,6 +12,7 @@ body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
     color: #3A3A3A;
+    overflow-x: hidden;
 }
 
 .nav {
@@ -71,7 +72,7 @@ body {
 
 .tftable tr {
     color: #171515;
-    background-color: #e0e0e0;
+    background-color: white;
 }
 
 .tftable td {
@@ -99,8 +100,51 @@ body {
     border-left: 1px solid black;
     font-size: 20px;
     margin: 0;
+    padding: 5px;
     text-transform: uppercase;
     background-color: #e0e0e0;
+}
+
+.defile {
+    background-color: #5aadbb;
+    display: inline-block;
+    /* modèle de boîte en ligne */
+    padding-right: 2em;
+    /* un peu d'espace pour la transition */
+    padding-left: 100%;
+    /* placement à droite du conteneur */
+    white-space: nowrap;
+    margin-top: 20px;
+    overflow-x: hidden;
+}
+
+.defile h2 {
+    margin: 0;
+    padding: 5px;
+    font-size: 21px;
+    animation-name: defilement-rtl;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow-x: hidden;
+
+}
+
+.defile span {
+    color: #3A3A3A !important;
+    text-transform: uppercase;
+}
+
+@keyframes defilement-rtl {
+    0% {
+        transform: translate3d(0, 0, 0);
+        /* position initiale à droite */
+    }
+
+    100% {
+        transform: translate3d(-110%, 0, 0);
+        /* position finale à gauche */
+    }
 }
 
 .titlescore {
@@ -111,7 +155,7 @@ body {
     justify-content: center;
     position: absolute;
     flex-wrap: wrap;
-    top: 20%;
+    top: 25%;
     font-size: 18px;
     background-color: #3a3a3a;
 }
