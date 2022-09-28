@@ -282,6 +282,7 @@ img {
     background-color: white;
     border-radius: 10px;
     z-index: 999;
+    cursor: pointer;
 }
 
 .fa-steam-symbol {
@@ -300,4 +301,40 @@ img {
 .fa-steam-symbol:hover {
     color: white;
     background-color: #5AADBB;
+}
+
+.mystyle {
+    color: white;
+    background-color: #5AADBB;
+}
+
+#activecoord {
+    color: red;
+    position: absolute;
+    right: 9.5em;
+    bottom: 5em;
+    padding: 0.5em;
+    border-radius: 10px;
+    z-index: 999;
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
+
+}
+
+.none {
+    display: none;
+}
+
+.test {
+    display: block;
+}
+
+.pic {
+    background-color: #0078A8;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2px;
+    margin: 1px;
 }

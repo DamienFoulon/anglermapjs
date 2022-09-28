@@ -21,6 +21,32 @@ let mapBounds = new L.LatLngBounds( // ?
 
 map.fitBounds(mapBounds);
 
+// const SilverStrand = [
+//     [75.672197, -176.484375],
+//     [78.630006, -163.828125],
+//     [79.624056, -149.765625],
+//     [79.687184, -140.449219],
+//     [74.959392, -99.667969],
+//     [52.375599, -52.558594],
+//     [42.163403, -66.269531],
+//     [25.799891, -45.351562],
+//     [7.710992, -50.625],
+//     [4.740675, -55.722656],
+//     [-33.870416, -62.929688],
+//     [-39.232253, -82.265625],
+//     [-42.163403, -85.253906],
+//     [-45.336702, -60.644531],
+//     [-48.458352, -58.710938],
+//     [-73.627789, -92.109375],
+//     [-75.364506, -110.566406],
+//     [-72.448792, -120.9375],
+// ]
+
+// var polyline = L.polyline(SilverStrand, { color: 'red' }).addTo(map);
+
+// zoom the map to the polyline
+
+
 L.tileLayer('https://www.anglermap.fr/map/{z}/{x}/{y}.png', {
     minZoom: 1,
     maxZoom: 5,
@@ -73,17 +99,17 @@ let markersList = {
         // }
     ],
     "Catfish": [
-        {
-            "lat": -40.6875,
-            "lng": 119.5625,
-            "popup": "Catfish",
-            "isDiamond": true,
-            "layer": catfishLayer
-        },
+        // {
+        //     "lat": -24.607069,
+        //     "lng": 129.375,
+        //     "popup": "Catfish",
+        //     "isDiamond": true,
+        //     "layer": catfishLayer
+        // },
         {
             "lat": -147.125,
             "lng": 218.375,
-            "popup": "Catfish <br> Baitcasting / Frog ",
+            "popup": "Catfish <br> Baitcasting / Frog 1 <br> Speed x1 - lunched : Max <br> <a href='/img/catfish.png'> Image </a>",
             "isDiamond": true,
             "layer": catfishLayer
         }
@@ -122,16 +148,9 @@ let markersList = {
     ],
     "Lake Trout": [
         {
-            "lat": -40.75,
-            "lng": 21.75,
-            "popup": "Lake Trout",
-            "isDiamond": true,
-            "layer": lakeTroutLayer
-        },
-        {
-            "lat": -95.9375,
-            "lng": 33.875,
-            "popup": "Lake Trout",
+            "lat": -96.25,
+            "lng": 32.375,
+            "popup": "Lake Trout <br> Baitcasting / Grub  <br> Jigging - depth : Max <br> <a class='pic' href='/img/laketrout/laketrout3.jpg'> Image1 </a> <a class='pic' href='/img/laketrout/laketrout1.jpg'> Image2 </a> <a class='pic' href='/img/laketrout/laketrout4.jpg'> Image3 </a>",
             "isDiamond": true,
             "layer": lakeTroutLayer
         },
@@ -200,9 +219,9 @@ let markersList = {
             'layer': rainbowTroutLayer
         },
         {
-            'lat': -195.25,
-            'lng': 83.8125,
-            'popup': 'Rainbow Trout',
+            'lat': -191.5,
+            'lng': 83.25,
+            'popup': 'Rainbow Trout <br> Baitcasting - turning 5',
             'isDiamond': true,
             'layer': rainbowTroutLayer
         }
@@ -215,13 +234,21 @@ let markersList = {
             'isDiamond': true,
             'layer': saugerLayer
         },
-        // {
-        //     'lat': -14.256845,
-        //     'lng': 25.123456,
-        //     'popup': 'Sauger',
-        //     'isDiamond': false,
-        //     'layer': saugerLayer
-        // }
+        {
+            'lat': -169.3125,
+            'lng': 220.6875,
+            'popup': 'Sauger <br> Float fishing- minnow',
+            'isDiamond': true,
+            'layer': saugerLayer
+        },
+        {
+            'lat': -106.3125,
+            'lng': 224.75,
+            'popup': 'Sauger <br> Baitcasting - spinner size 7',
+            'isDiamond': true,
+            'layer': saugerLayer
+        },
+
     ],
     "Smallmouth Bass": [
         // {
@@ -324,9 +351,19 @@ buttons.forEach(button => {
     })
 })
 
+
 let displayCoords = false
 function toggleCoord() {
+    let plus = document.getElementById('plustoggle');
+    plus.classList.toggle("mystyle");
+
+    let active = document.getElementById('activecoord');
+    active.classList.toggle("test");
+
+
+
     displayCoords = !displayCoords;
+
 }
 
 var popup = L.popup();
@@ -339,3 +376,4 @@ function onMapClick(e) {
     }
 }
 map.on('click', onMapClick);
+
